@@ -11,6 +11,8 @@
     <OutputPath>.</OutputPath>
     <Name>Esimene_Pygame.Tsugunov</Name>
     <RootNamespace>Esimene_Pygame.Tsugunov</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <InterpreterId>Global|PythonCore|3.11</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,12 +23,14 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="akna.py" />
     <Compile Include="Esimene_Pygame.Tsugunov.py" />
+    <Compile Include="Ülesanne1.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="images.png" />
     <Content Include="ooo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.11" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
