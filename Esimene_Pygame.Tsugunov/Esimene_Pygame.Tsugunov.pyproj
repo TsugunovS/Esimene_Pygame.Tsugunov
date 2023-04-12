@@ -23,11 +23,14 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="2osa_Tsüklid_ja_funktsioonid.py" />
     <Compile Include="Esimene_Pygame.Tsugunov.py" />
     <Compile Include="Ülesanne1.py" />
+    <Compile Include="Ülesanne2.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ooo.png" />
+    <Content Include="planet.xcf" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.11" />
