@@ -4,7 +4,7 @@ ekraani_pind=pygame.display.set_mode((640,480))
 ekraani_pind.fill((195, 224, 223))
 pygame.display.set_caption("Esimene aken")
 
-#отступ слева, справа
+#отступ слева, справа,
 ristkülik=pygame.Rect(0,300,640,100)
 pygame.draw.rect(ekraani_pind,(0, 0, 0),ristkülik)
 #jalg=pygame.Rect(310,200,30,200)
