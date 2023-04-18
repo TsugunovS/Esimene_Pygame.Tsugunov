@@ -38,8 +38,8 @@ Uks(100,400,500,400,pind,majavarv,suurus)
 Aken(100,400,500,400,pind,majavarv,suurus)
 pygame.display.flip()
 
-ristkülik=pygame.Rect(20,80,105,5)                            
-pygame.draw.rect(pind,(200,0,0),ristkülik)
+#ristkülik=pygame.Rect(0,0,0,0)                            
+#pygame.draw.rect(pind,(200,0,0),ristkülik)
 
 for i in range(10):
     r=random.randint(0,255)
