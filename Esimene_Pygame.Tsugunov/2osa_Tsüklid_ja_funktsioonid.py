@@ -3,19 +3,19 @@ import pygame
 import random
 import sys
 
-def Maja(x,y,laius,kõrgus,pind,värv):
-    punktid=[(x,y- ((3/4.0)*kõrgus)), (x,y), (x+laius,y), (x+laius,y-(3/4.0) * kõrgus),
-             (x,y-((3/4.0)*kõrgus)), (x + laius/2.0,-kõrgus), (x+laius,y-(3/4.0)*kõrgus)]
-    suurus=random.randint(1,10)
+def Maja(x,y,laius,kõrgus,pind,värv,suurus):
+    punktid=[(x,y-((3/4.0)*kõrgus)), (x,y), (x+laius,y), (x+laius,y-(3/4.0)*(kõrgus)),(x,y-((3/4.0)*kõrgus)), (x+laius/2.0,y-kõrgus),(x+laius,y-(3/4.0)*kõrgus)]
     pygame.draw.lines(pind,värv,False,punktid,suurus)
-    pygame.draw.lines(pind, värv, False, punktid, suurus)
 
-def draw_house(x, y, width, height, surface, color):
-    # Draw the house
-    points = [(x, y - 0.75 * height), (x, y), (x + width, y), (x + width, y - 0.75 * height),
-              (x, y - 0.75 * height), (x + width / 2, -height), (x + width, y - 0.75 * height)]
-    thickness = random.randint(1, 10)
-    pygame.draw.lines(surface, color, False, points, thickness)
+def Uks(x,y,laius,kõrgus,pind,värv,suurus):
+    punktid=[(x,y),(x,y-(1/2)*kõrgus),(x+(1/3)*laius,y-(1/2)*kõrgus),(x+(1/3)*laius,y),(x,y)]
+#    punktid=[(x,y-((3/4.0)*kõrgus)), (x,y), (x+laius,y), (x+laius,y-(3/4.0)*(kõrgus)),(x,y-((3/4.0)*kõrgus)), ]
+    pygame.draw.lines(pind,värv,True,punktid,suurus)
+
+def Aken(x,y,laius,kõrgus,pind,värv,suurus):
+    punktid=[(x,y),(x,y-(1/2)*kõrgus),(x+(1/3)*laius,y-(1/2)*kõrgus),(x+(1/3)*laius,y),(x,y)]
+    pygame.draw.lines(pind,värv,True,punktid,suurus)
+
 
 r=random.randint(0,255)
 g=random.randint(0,255)
@@ -27,13 +27,19 @@ r=random.randint(0,255)
 g=random.randint(0,255)
 b=random.randint(0,255)
 majavarv=[r,g,b]
+suurus=random.randint(1,10)
 
 pind=pygame.display.set_mode([640,480])
 pygame.display.set_caption("Juhuslikud objektid + majake")
 pind.fill(fon)
 
-Maja(100,400,300,400,pind,majavarv)
+Maja(100,400,500,400,pind,majavarv,suurus)
+Uks(100,400,500,400,pind,majavarv,suurus)
+Aken(100,400,500,400,pind,majavarv,suurus)
 pygame.display.flip()
+
+ristkülik=pygame.Rect(20,80,105,5)                            
+pygame.draw.rect(pind,(200,0,0),ristkülik)
 
 for i in range(10):
     r=random.randint(0,255)
