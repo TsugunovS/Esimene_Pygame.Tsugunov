@@ -9,7 +9,7 @@ def Maja(x,y,laius,kõrgus,pind,värv,suurus):
 
 def Uks(x,y,laius,kõrgus,pind,värv,suurus):
     punktid=[(x,y),(x,y-(1/2)*kõrgus),(x+(1/3)*laius,y-(1/2)*kõrgus),(x+(1/3)*laius,y),(x,y)]
-#    punktid=[(x,y-((3/4.0)*kõrgus)), (x,y), (x+laius,y), (x+laius,y-(3/4.0)*(kõrgus)),(x,y-((3/4.0)*kõrgus)), ]
+##    punktid=[(x,y-((3/4.0)*kõrgus)), (x,y), (x+laius,y), (x+laius,y-(3/4.0)*(kõrgus)),(x,y-((3/4.0)*kõrgus)), ]
     pygame.draw.lines(pind,värv,True,punktid,suurus)
 
 def Aken(x,y,laius,kõrgus,pind,värv,suurus):
